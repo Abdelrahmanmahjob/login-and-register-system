@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box , .register-box {
+    max-width: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.login-box.hidden {
+    display: none;
+}
+
+input {
+    padding: 10px 0 10px 15px;
+}
+
+button {
+    align-self: flex-start;
+    padding: 8px 20px;
+    background-color: rgb(0, 174, 255);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+
+}
+
+h1 {
+    text-align: center;
+} 
+
+.success-login.container {
+    max-width: 500px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.success-login h1 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.success-login h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+.success-login h2 span {
+    color: #2980b9;
+    text-transform: capitalize;
+}
+
+.user-information {
+    background: #f0f4f8;
+    border-radius: 8px;
+    padding: 18px 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
+}
+
+.user-information p {
+    font-size: 1rem;
+    color: #34495e;
+    margin: 12px 0;
+    letter-spacing: 0.5px;
+}
+
+.user-information span {
+    font-weight: bold;
+    color: #2980b9;
+    background: #eaf6fb;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.logout {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 24px;
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.logout:hover {
+    background: #c0392b;
+}
+
+.handle-messages {
+    width: 100%;
+    height: 50px;
+}
+
+.success-register , 
+.failed-to-login ,
+.failed-to-register {
+    padding: 10px 0 10px 12px;
+    border-radius: 3px;
+    font-style: italic;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease, display 0.5s ease allow-discrete;
+}
+
+.failed-to-login , 
+.failed-to-register {
+    background-color: rgb(255, 177, 177);
+}
+
+.success-register {
+    background-color: rgba(154, 255, 179, 0.95);
+}
+
+.success-register.show , 
+.failed-to-login.show ,
+.failed-to-register.show {
+    opacity: 1;
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+}
